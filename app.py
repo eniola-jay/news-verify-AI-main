@@ -321,6 +321,9 @@ def index():
 
 @app.route('/<path:path>')
 def serve_static(path):
+    public_path = os.path.join(os.getcwd(), 'public', path)
+    if os.path.exists(public_path):
+        return send_from_directory('public', path)
     return send_from_directory('.', path)
 
 
