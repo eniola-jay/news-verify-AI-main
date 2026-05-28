@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Results - NewsVerify AI</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-shield-alt text-primary me-2" style="font-size: 1.5rem;"></i>
+                <span class="fw-bold text-primary">NewsVerify AI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icons"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginmodal">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-black px-3 ms-2" href="#" data-bs-toggle="modal"
+                            data-bs-target="#registermodal">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Result Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Result Card -->
+                    <div class="card shadow-lg border-0">
+                        <div class="card-header bg-primary text-white text-center py-3">
+                            <h3 class="mb-0"><i class="fas fa-chart-bar me-2"></i>Verification Results</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <!-- Main Results Grid -->
+                            <div class="row g-4 mb-4">
+                                <!-- Credibility Score -->
+                                <div class="col-md-4">
+                                    <div class="text-center p-4 bg-light rounded">
+                                        <h6 class="text-muted mb-3">CREDIBILITY SCORE</h6>
+                                        <div class="position-relative d-inline-block">
+                                            <svg width="150" height="150">
+                                                <circle cx="75" cy="75" r="65" fill="none" stroke="#e9ecef"
+                                                    stroke-width="12" />
+                                                <circle id="scoreCircle" cx="75" cy="75" r="65" fill="none"
+                                                    stroke="#028090" stroke-width="12" stroke-dasharray="408.4"
+                                                    stroke-dashoffset="408.4" transform="rotate(-90 75 75)"
+                                                    style="transition: stroke-dashoffset 1s ease;" />
+                                                <text x="75" y="75" text-anchor="middle" dy="0.3em" font-size="32"
+                                                    font-weight="bold" fill="#028090" id="scoreText">87%</text>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Classification -->
+                                <div class="col-md-4">
+                                    <div class="text-center p-4 bg-light rounded">
+                                        <h6 class="text-muted mb-3">CLASSIFICATION</h6>
+                                        <div class="py-3">
+                                            <span id="ClassificationBadge" class="badge bg-success fs-5 px-4 py-3">
+                                                <i class="fas fa-check-circle me-2"></i>LIKELY CREDIBLE
+                                            </span>
+                                        </div>
+                                        <P class="text-muted small mt-3 mb-0">Based on AI analysis of linguistic
+                                            patterns</P>
+                                    </div>
+                                </div>
+
+                                <!-- Confidence -->
+                                <div class="col-md-4">
+                                    <div class="text-center p-4 bg-light rounded">
+                                        <h6 class="text-muted mb-3">CONFIDENCE LEVEL</h6>
+                                        <div class="py-3">
+                                            <span id="confidenceBadge" class="badge bg-primary fs-5 px-4 py-3">
+                                                <i class="fas fa-star me-2"></i>HIGH
+                                            </span>
+                                        </div>
+                                        <p class="text-muted small mt-3 mb-0">Model Certainty in prediction</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Explanation Section -->
+                            <div class="card border-primary">
+                                <div class="card-header bg-primary bg-opacity-10">
+                                    <h5 class="mb-0">
+                                        <button
+                                            class="btn btn-link text-decoration-none text-dark fw-bold w-100 text-start"
+                                            type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#explanationCollapse">
+                                            <i class="fas fa-info-circle text-primary me-2"></i>Why This Result?
+                                            <i class="fas fa-chevron-down float-end"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="explanationCollapse" class="collapse show">
+                                    <div class="card-body">
+                                        <h6 class="fw-bold text-success mb-3"><i class="fas fa-check me-2"></i>Factors
+                                            Supporting Credibility:</h6>
+                                        <ul class="list-unstyled" id="positiveFactors">
+                                            <li class="mb-2"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Professional
+                                                journalistic writing style detected</li>
+                                            <li class="mb-2"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Multiple credible
+                                                sources cited within article</li>
+                                            <li class="mb-2"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Factual claims
+                                                consistent with verified information</li>
+                                            <li class="mb-2"><i
+                                                    class="fas fa-check-circle text-success me-2"></i>Balanced tone
+                                                without excessive emotion</li>
+                                        </ul>
+
+                                        <h6 class="fw-bold text-warning mb-3 mt-4"><i
+                                                class="fas fa-exclamation-triangle me-2"></i>Minor Concerns:</h6>
+                                        <ul class="list-unstyled" id="negativeFactors">
+                                            <li class="mb-2"><i
+                                                    class="fas fa-exclamation-circle text-warning me-2"></i>Limited
+                                                corroboration from independent sources</li>
+                                        </ul>
+
+                                        <div class="alert alert-info mt-4">
+                                            <i class="fas fa-lightbulb me-2"></i><strong>Recommendation:</strong>
+                                            This article appears credible based on our analysis. However, always verify
+                                            important claims with additional trusted sources.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Processing Details -->
+                            <div class="row g-3 mt-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-clock text-primary me-2"></i>
+                                        <small class="text-muted">Processing Time: <strong
+                                                id="processingTime">2.3s</strong></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-calendar text-primary me-2"></i>
+                                        <small class="text-muted">Analyzed: <strong id="timestamp">Just
+                                                now</strong></small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="d-flex gap-2 mt-4 flex-wrap">
+                                <button class="btn btn-outline-primary" onclick="shareResult()">
+                                    <i class="fas fa-share-alt me-2"></i>Share Result
+                                </button>
+                                <button class="btn btn-outline-primary" onclick="saveResult()">
+                                    <i class="fas fa-save me-2"></i>Save to History
+                                </button>
+                                <a href="index.html" class="btn btn-primary">
+                                    <i class="fas fa-redo me-2"></i>Verify Another Article
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="fw-bold mb-3">NewsVerify AI</h5>
+                    <p class="text-white-50">Empowering users with AI-powered news credibility assessment.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="history.html" class="text-white-50 text-decoration-none">History</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Connect</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-white-50 my-4">
+            <p class="text-center text-white-50 mb-0">&copy; 2025 NewsVerify AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/results.js"></script>
+</body>
+
+</html>

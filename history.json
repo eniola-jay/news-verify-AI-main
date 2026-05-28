@@ -1,0 +1,90 @@
+[
+  {
+    "id": "9667b90d",
+    "date": "28 May 2026",
+    "time": "12:09 PM",
+    "preview": "ICYMI: Atiku wins ADC ticket, seeks unity with Amaechi, Hayatu-Deen May 28, 2026 6:00 am Atiku Abubakar.Photo credit: We...",
+    "inputType": "url",
+    "status": "success",
+    "processingTime": "2.93s",
+    "sourceUrl": "https://punchng.com/just-in-atiku-wins-adc-presidential-primary-election/",
+    "score": 94,
+    "classification": "LIKELY CREDIBLE",
+    "confidence": "HIGH",
+    "positives": [
+      "Multiple source attributions and expert citations detected.",
+      "No sensationalist or clickbait language detected.",
+      "Well-structured sentences consistent with professional journalism.",
+      "Specific data points, dates, and figures detected \u2014 signs of factual reporting.",
+      "Article has substantial depth and length consistent with quality journalism."
+    ],
+    "negatives": [
+      "Moderate emotional language detected."
+    ]
+  },
+  {
+    "id": "c59981f4",
+    "date": "28 May 2026",
+    "time": "10:19 AM",
+    "preview": "Fire in Kenya girls\u2019 school dorm kills 16 May 28, 2026 10:10 am Photo: BBC Agency Report Kindly share this story: A fire...",
+    "inputType": "url",
+    "status": "success",
+    "processingTime": "3.18s",
+    "sourceUrl": "https://punchng.com/fire-in-kenya-girls-school-dorm-kills-16/",
+    "score": 96,
+    "classification": "LIKELY CREDIBLE",
+    "confidence": "HIGH",
+    "positives": [
+      "Multiple source attributions and expert citations detected.",
+      "No sensationalist or clickbait language detected.",
+      "Well-structured sentences consistent with professional journalism.",
+      "Specific data points, dates, and figures detected \u2014 signs of factual reporting.",
+      "Article has substantial depth and length consistent with quality journalism."
+    ],
+    "negatives": [
+      "Moderate emotional language detected."
+    ]
+  },
+  {
+    "id": "4f270d2e",
+    "date": "28 May 2026",
+    "time": "10:17 AM",
+    "preview": "do you think covid virus will affect the economy of the world by the year 2028?",
+    "inputType": "text",
+    "status": "success",
+    "processingTime": "0.30s",
+    "score": 55,
+    "classification": "UNCERTAIN",
+    "confidence": "MEDIUM",
+    "positives": [
+      "No sensationalist or clickbait language detected.",
+      "Balanced, measured tone without excessive emotional language.",
+      "Well-structured sentences consistent with professional journalism."
+    ],
+    "negatives": [
+      "Lack of explicit source attribution or expert citations.",
+      "Very short content limits the reliability of this analysis."
+    ]
+  },
+  {
+    "id": "b2d5abd0",
+    "date": "28 May 2026",
+    "time": "10:13 AM",
+    "preview": "Do you think Donald Trump is the acting president of United States?",
+    "inputType": "text",
+    "status": "success",
+    "processingTime": "0.30s",
+    "score": 39,
+    "classification": "NON-CREDIBLE",
+    "confidence": "HIGH",
+    "positives": [
+      "No sensationalist or clickbait language detected.",
+      "Balanced, measured tone without excessive emotional language."
+    ],
+    "negatives": [
+      "Lack of explicit source attribution or expert citations.",
+      "Absence of specific data points, dates, or verifiable figures.",
+      "Very short content limits the reliability of this analysis."
+    ]
+  }
+]
