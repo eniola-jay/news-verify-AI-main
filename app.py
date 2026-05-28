@@ -15,9 +15,14 @@ app = Flask(__name__, static_folder='.')
 
 # ─── Configuration ────────────────────────────────────────────────────────────
 ALLOWED_EXTENSIONS = {'txt', 'pdf'}
-UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
-HISTORY_FILE = os.path.join(os.getcwd(), 'history.json')
-DB_FILE = os.path.join(os.getcwd(), 'users.db')
+RUNTIME_DIR = (
+    os.path.join('/tmp', 'newsverify')
+    if os.environ.get('VERCEL')
+    else os.getcwd()
+)
+UPLOAD_FOLDER = os.path.join(RUNTIME_DIR, 'uploads')
+HISTORY_FILE = os.path.join(RUNTIME_DIR, 'history.json')
+DB_FILE = os.path.join(RUNTIME_DIR, 'users.db')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # 5MB limit

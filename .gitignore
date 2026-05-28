@@ -1,5 +1,10 @@
 users.db
 *.db-journal
 __pycache__/
+history.json
+uploads/
+venv/
+.venv/
+.vercel/
 venv/
 .vercel/
